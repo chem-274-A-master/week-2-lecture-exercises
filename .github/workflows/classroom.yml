@@ -18,15 +18,7 @@ jobs:
       run: |
         pip install pytest
 
-    - name: Test 00_01
-      id: test-00_01
-      uses: classroom-resources/autograding-command-grader@v1
-      with:
-        test-name: Test 00_01
-        command: pytest -vk "test_00_01"
-        timeout: 10
-        max-score: 1
-
+    # Existing tests for Module 1
     - name: Test 01_01
       id: test-01_01
       uses: classroom-resources/autograding-command-grader@v1
@@ -62,14 +54,44 @@ jobs:
         command: pytest -vk "test_01_04"
         timeout: 10
         max-score: 1
+        
+    - name: Test 02_01
+      id: test-02_01
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test 02_01
+        command: pytest -vk "test_02_01"
+        timeout: 10
+        max-score: 1
+
+    - name: Test 02_02
+      id: test-02_02
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test 02_02
+        command: pytest -vk "test_02_02"
+        timeout: 10
+        max-score: 1
+
+    # New test for Module 3
+    - name: Test 03_01
+      id: test-03_01
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test 03_01
+        command: bash tests/test_03_01.sh
+        timeout: 10
+        max-score: 1
 
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
-        TEST-00_01_RESULTS: "${{steps.test-00_01.outputs.result}}"
         TEST-01_01_RESULTS: "${{steps.test-01_01.outputs.result}}"
         TEST-01_02_RESULTS: "${{steps.test-01_02.outputs.result}}"
         TEST-01_03_RESULTS: "${{steps.test-01_03.outputs.result}}"
         TEST-01_04_RESULTS: "${{steps.test-01_04.outputs.result}}"
+        TEST-02_01_RESULTS: "${{steps.test-02_01.outputs.result}}"
+        TEST-02_02_RESULTS: "${{steps.test-02_02.outputs.result}}"
+        TEST-03_01_RESULTS: "${{steps.test-03_01.outputs.result}}"
       with:
-        runners: test-00_01,test-01_01,test-01_02,test-01_03,test-01_04
+        runners: test-01_01,test-01_02,test-01_03,test-01_04,test-02_01,test-02_02,test-03_01
