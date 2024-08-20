@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# Navigate to the parent directory
-cd ..
+# Run M03Basics01.sh
+# This file assumes you are running from the root directory of the repository
+
+bash M03Basics01.sh
 
 # Check if the file was downloaded and renamed correctly
 if [ -f "msse_gist.txt" ]; then

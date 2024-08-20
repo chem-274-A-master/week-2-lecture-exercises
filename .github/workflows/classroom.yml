@@ -79,7 +79,7 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Test 03_01
-        command: bash tests/test_03_01.sh
+        command: bash tests/test_M03.sh
         timeout: 10
         max-score: 1
 
