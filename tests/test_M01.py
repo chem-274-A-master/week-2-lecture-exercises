@@ -79,7 +79,7 @@ def test_01_03_03():
     # Assert the length is updated correctly
     assert bond.length == 1.29
 
-def test_01_04():
+def test_01_04_01():
 
     from M01Classes04 import Bond
 
@@ -88,7 +88,7 @@ def test_01_04():
     
     assert str(bond) == expected_output, f"Expected '{expected_output}' but got '{str(bond)}'"
 
-def test_bond_str_different_atoms():
+def test_01_04_02():
 
     from M01Classes04 import Bond
 
