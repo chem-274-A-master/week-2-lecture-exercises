@@ -78,3 +78,21 @@ def test_01_03_03():
     
     # Assert the length is updated correctly
     assert bond.length == 1.29
+
+def test_01_04():
+
+    from M01Classes04 import Bond
+
+    bond = Bond(["C", "H"], 1.09)
+    expected_output = "Bond with length 1.09 between atoms C and H."
+    
+    assert str(bond) == expected_output, f"Expected '{expected_output}' but got '{str(bond)}'"
+
+def test_bond_str_different_atoms():
+
+    from M01Classes04 import Bond
+
+    bond = Bond(["O", "H"], 0.96)
+    expected_output = "Bond with length 0.96 between atoms O and H."
+    
+    assert str(bond) == expected_output, f"Expected '{expected_output}' but got '{str(bond)}'"
