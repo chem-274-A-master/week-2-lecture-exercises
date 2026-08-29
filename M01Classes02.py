@@ -8,7 +8,7 @@ These arguments are stored as attributes named 'atoms' and 'length', respectivel
 Building on this class, add an instance method called "stretch".
 This method should take a float as its input parameter, representing a change in distance.
 In this method, update the 'length' attribute by adding the input parameter to its current value.
-Use type hints for every parameter and return value.
+Be sure to practices using type hints!
 
 See the __main__ function for example usage.
 """

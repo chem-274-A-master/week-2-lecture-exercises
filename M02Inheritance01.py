@@ -5,7 +5,7 @@ Your custom exception should inherit from Python's built-in `Exception` class.
 
 After defining your custom exception, modify the given `is_bond` function below to raise your `InvalidDistanceError` when the `distance` parameter is negative.
 The exception should carry a message stating that "Distance must be greater than or equal to zero."
-Use type hints for every function parameter and return value.
+Be sure to practices using type hints!
 """
 
 # write your custom exception here

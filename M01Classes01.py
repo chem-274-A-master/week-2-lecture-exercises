@@ -9,7 +9,7 @@ The constructor should take two arguments:
 2. A floating-point number representing the distance (bond length) between the atoms in the bond.
 
 Store these values as instance attributes named 'atoms' and 'length', respectively.
-Use type hints for every parameter and return value.
+Be sure to practices using type hints!
 
 See the __main__ function for example usage.
 """

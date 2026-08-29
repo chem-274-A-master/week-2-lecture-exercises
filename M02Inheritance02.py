@@ -6,7 +6,7 @@ Consider the sample Atom class below. It assumes a neutral charge, i.e., the num
 Create a class called Ion that inherits from Atom.
 Add an extra argument called "charge" to the Ion constructor.
 Use super() to call the constructor of the Atom class, and then modify the number of electrons according to the charge.
-Use type hints for every parameter and return value.
+Be sure to practices using type hints!
 """
 
 

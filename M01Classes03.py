@@ -11,7 +11,7 @@ The default value for this optional argument should be True.
 If False is passed for this argument,
 the method should assume that the user is inputting the length in units of nanometers.
 Use the class attribute `conversion_factor` to convert the input argument to Ångström before updating the bond length.
-Use type hints for every parameter, return value, and class attribute.
+Be sure to practices using type hints!
 
 See the __main__ function for example usage.
 
