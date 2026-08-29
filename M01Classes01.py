@@ -9,16 +9,18 @@ The constructor should take two arguments:
 2. A floating-point number representing the distance (bond length) between the atoms in the bond.
 
 Store these values as instance attributes named 'atoms' and 'length', respectively.
+Use type hints for every parameter and return value.
 
 See the __main__ function for example usage.
 """
 
+# Write your class here.
+
 if __name__ == "__main__":
+    bond = Bond(["C", "H"], 1.09)
 
-  bond = Bond(["C", "H"], 1.09)
+    # This will print 1.09
+    print(bond.length)
 
-  # This will print 1.09
-  print(bond.length)
-
-  # This will print ["C", "H"]
-  print(bond.atoms)
+    # This will print ["C", "H"]
+    print(bond.atoms)
