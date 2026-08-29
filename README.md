@@ -65,7 +65,8 @@ Edit only the exercise files.
 | `M01Classes04.py` | Add a `__str__` method to the `Bond` class. |
 | `M02Inheritance01.py` | Define and raise an `InvalidDistanceError` for negative distances. |
 | `M02Inheritance02.py` | Define an `Ion` class that inherits from `Atom`. |
-| `M03Basics01.sh` | Use `wget` to save the specified URL as `msse_gist.txt`. |
+| `M03Composition01.py` | Define an `Atom` class and compose atoms into a `Molecule` that reports its total electrons. |
+| `M04Basics01.sh` | Use `wget` to save the specified URL as `msse_gist.txt`. |
 
 Do not modify files in `tests/`, `.github/scripts/`, or `.github/workflows/`.
 Those files define how your work is checked.
@@ -89,6 +90,7 @@ pytest -v -k test_01_03
 pytest -v -k test_01_04
 pytest -v -k test_02_01
 pytest -v -k test_02_02
+pytest -v -k test_03_01
 ```
 
 The `-k` commands run all test cases belonging to the named exercise.
@@ -97,16 +99,16 @@ The shell exercise is not run by `pytest`. Test it separately from the
 repository directory:
 
 ```bash
-bash tests/test_M03.sh
+bash tests/test_M04.sh
 ```
 
-This command runs `M03Basics01.sh` and checks that it downloaded a file named
+This command runs `M04Basics01.sh` and checks that it downloaded a file named
 `msse_gist.txt`. It requires an internet connection and the `wget` command.
 The downloaded file is test output and does not need to be committed.
 
-When all exercises are correct, `pytest -v` should report 13 passing tests and
+When all exercises are correct, `pytest -v` should report 16 passing tests and
 the shell test should print a passing message. The autograder groups these
-checks into seven exercises worth one point each.
+checks into eight exercises worth one point each.
 
 ## Submit your work
 
@@ -114,7 +116,7 @@ Review your changes, commit them, and push your branch to GitHub:
 
 ```bash
 git status
-git add M01Classes*.py M02Inheritance*.py M03Basics01.sh
+git add M01Classes*.py M02Inheritance*.py M03Composition*.py M04Basics*.sh
 git commit -m "Complete Week 2 lecture exercises"
 git push
 ```

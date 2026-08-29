@@ -11,4 +11,4 @@
 # The file should be stored as msse_gist.txt
 #
 # You can run the test for this exercise by executing the following command in your terminal:
-# bash tests/test_M03.sh
+# bash tests/test_M04.sh

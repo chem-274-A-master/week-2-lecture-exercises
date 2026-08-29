@@ -1,14 +1,13 @@
-"""Run each exercise's tests and publish a seven-point grading summary."""
+"""Run each exercise's tests and publish an eight-point grading summary."""
 
 from __future__ import annotations
 
 import json
 import os
-from datetime import datetime, timezone
-from pathlib import Path
 import subprocess
 import sys
-
+from datetime import datetime, timezone
+from pathlib import Path
 
 EXERCISES = (
     ("Test 01_01", (sys.executable, "-m", "pytest", "-q", "-k", "test_01_01")),
@@ -17,7 +16,8 @@ EXERCISES = (
     ("Test 01_04", (sys.executable, "-m", "pytest", "-q", "-k", "test_01_04")),
     ("Test 02_01", (sys.executable, "-m", "pytest", "-q", "-k", "test_02_01")),
     ("Test 02_02", (sys.executable, "-m", "pytest", "-q", "-k", "test_02_02")),
-    ("Test 03_01", ("bash", "tests/test_M03.sh")),
+    ("Test 03_01", (sys.executable, "-m", "pytest", "-q", "-k", "test_03_01")),
+    ("Test 04_01", ("bash", "tests/test_M04.sh")),
 )
 TEST_TIMEOUT_SECONDS = 30
 RESULTS_PATH = Path("grading-results.json")
