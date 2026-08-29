@@ -19,14 +19,39 @@ conda create --name chem274a conda-forge::python
 conda activate chem274a
 ```
 
-After activating it, install `pytest` and `wget`:
+After activating it, install `pytest`:
 
 ```bash
-conda install conda-forge::pytest conda-forge::wget
+conda install conda-forge::pytest
 ```
 
 The environment is active when `(chem274a)` appears at the beginning of your
 terminal prompt. Run `conda deactivate` when you are finished working.
+
+The shell exercise also requires `wget`. Check
+whether it is already installed:
+
+```bash
+wget --version
+```
+
+If that command is not found, install `wget` for your operating system:
+
+On macOS with [Homebrew](https://brew.sh/):
+
+```bash
+brew install wget
+```
+
+On Ubuntu Linux or Ubuntu under WSL:
+
+```bash
+sudo apt update
+sudo apt install wget
+```
+
+If you use another Linux distribution, install `wget` with that
+distribution's system package manager.
 
 ## Complete the exercises
 
